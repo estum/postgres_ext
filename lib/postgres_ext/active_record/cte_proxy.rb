@@ -14,6 +14,10 @@ class CTEProxy
     @_reflections = {}
   end
 
+  def arel_engine
+    @arel_table.engine
+  end
+
   def name
     @name
   end

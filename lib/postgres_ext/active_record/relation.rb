@@ -10,3 +10,4 @@ else
   require 'postgres_ext/active_record/relation/predicate_builder'
 end
 
+require 'postgres_ext/active_record/relation_extension'

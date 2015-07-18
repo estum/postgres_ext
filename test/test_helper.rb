@@ -9,6 +9,12 @@ end
 require 'dotenv'
 Dotenv.load
 
+# Load squeel if available
+begin
+  require 'squeel'
+rescue LoadError
+end
+
 require 'postgres_ext'
 
 ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'])

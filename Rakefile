@@ -38,7 +38,7 @@ namespace :test do
   desc 'Test against all supported ActiveRecord versions'
   task :all do
     # Currently only supports Active Record v4.0
-    %w(4.0.x 4.1.x 4.2.x).each do |version|
+    %w(4.0.x 4.1.x 4.2.x 4.2.2+squeel-1.2.3).each do |version|
       sh "BUNDLE_GEMFILE='gemfiles/Gemfile.activerecord-#{version}' bundle install --quiet"
       sh "BUNDLE_GEMFILE='gemfiles/Gemfile.activerecord-#{version}' bundle exec rake test"
     end

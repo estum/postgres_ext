@@ -1,0 +1,11 @@
+source "https://rubygems.org"
+
+gem "activerecord", "4.2.2"
+gem "pg", "~> 0.15"
+gem "squeel", "~> 1.2.3"
+
+gemspec :path => '..'
+
+unless ENV['CI'] || RUBY_PLATFORM =~ /java/
+  gem 'byebug'
+end
